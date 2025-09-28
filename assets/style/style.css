@@ -1,32 +1,139 @@
-html{
-    font-family: Arial, Helvetica, sans-serif;
+/*Font y Colores*/
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --mint-cream: #f7fff7ff;
+  --jet: #343434ff;
+  --delft-blue: #2f3061ff;
+  --naples-yellow: #ffe66dff;
+   --engineering-orange: #d00000ff; 
+}
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+ .monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quicksand-font {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+/*EStilos de la Pagina*/
+html {
+  box-sizing: border-box;
+  background-color: var(--jet);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     margin: 0;
+}
+.h1{
+    text-decoration: none;
+    color: var(--jet);
+}
+h1 {
+    margin-top: 0;
+    margin-left: 1rem;
     padding: 0;
-    box-sizing: border-box;
+    max-width: 18rem;
 }
+/*.logo-Span{
+    text-decoration: underline;
+    text-decoration-color: var(--engineering-orange);
+}
+*/
 header{
-display: flex;
-flex-direction: row;
-align-items: center;
-gap: 30rem;
-}
-.banner{
     background-image: url(/assets/img/banner.jpg);
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    height: 30rem;
-    width: 100%;
-    margin-bottom: 4rem;
+    height: 40rem;
+    align-items: center;
+    gap: 30rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); 
+    z-index: 1;
+    pointer-events: none;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+.header{
+    background-color: rgb(0, 0, 0);
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+nav{
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    height: 3rem;
+    justify-content: center;
+    
+}
+nav a{
+    text-decoration: none;
+    color: var(--jet);
+    font-weight: 600;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-decoration-color: var(--naples-yellow);
 }
 .banner-text{
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 28rem;
-    background-color: aqua;
     align-items: center;
+    justify-content: center;
+    margin: -8rem 5rem;
+    
 }
+.banner-text-h2{
+    font-size: 2.5rem;
+    
+}
+.bts1{
+    color: var(--naples-yellow);
+}
+
+.bts2{
+    color: var(--engineering-orange);
+}
+
 /*Services*/
 .h2{
     text-align: center;
