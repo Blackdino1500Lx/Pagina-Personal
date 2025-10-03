@@ -29,6 +29,7 @@
 html {
   box-sizing: border-box;
   background-color: var(--jet);
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -40,9 +41,11 @@ body {
     font-style: normal;
     margin: 0;
 }
-.h1{
+
+.h1 a{
     text-decoration: none;
-    color: var(--jet);
+    color: var(--jet); 
+    
 }
 h1 {
     margin-top: 0;
@@ -60,7 +63,7 @@ header{
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    height: 40rem;
+    height: 50rem;
     align-items: center;
     gap: 30rem;
     max-width: 100%;
@@ -108,10 +111,6 @@ nav a{
     font-weight: bold;
 }
 
-nav a.active {
-    text-decoration: underline;
-    text-decoration-color: var(--naples-yellow);
-}
 .banner-text{
     display: flex;
     flex-direction: column;
@@ -148,28 +147,34 @@ nav a.active {
     max-width: 90%;
     margin: 0 auto;
 }
-    
+  
 .div2 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
-    background-color: antiquewhite;
+    background-color: var(--delft-blue);;
     height: 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
 }
 
 .div3 {
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 3;
-    background-color: antiquewhite;
+    background-color: var(--delft-blue);
     height: 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
 }
 
 .div4 {
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
-    background-color: antiquewhite;
+    background-color: var(--delft-blue);
     height: 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
 }
 
 .div5 {
@@ -177,8 +182,15 @@ nav a.active {
     grid-row: span 3 / span 3;
     grid-column-start: 4;
     grid-row-start: 4;
-    background-color: antiquewhite;
+    background-color: var(--delft-blue);
     height: 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.icon{
+    max-width: 8rem;
+    margin: 0 auto;
+    filter: invert();
 }
 /*Projects*/
 .projects{
