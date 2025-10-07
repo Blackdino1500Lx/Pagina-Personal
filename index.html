@@ -34,45 +34,105 @@
 <main>
  <h2 id="services" class="h2">Servicios</h2>       
 <section class="services" id="services">
-    <div class="div2 child-div">
-        <img class="icon" src="assets/img/icons/development.png" alt="desarrollo web">
-        <article class="div-content">
+    <div class="child-div-flip">
+        <div class="child-inner">
+            <div class="child-front">
+                <img class="icon" src="assets/img/icons/development.png" alt="desarrollo web">
+                <h3 class="h3">Desarrollo Web</h3>
+            </div>
+        <article class="child-back">
             <h3 class="h3">Desarrollo Web</h3>
             <p class="content-p">Transformo ideas en experiencias digitales cautivadoras. Desde sitios web dinámicos hasta aplicaciones personalizadas.</p>
         </article>
+        </div>
     </div>
-    <div class="div3 child-div">
-        <img class="icon" src="assets/img/icons/user-experience.png" alt="diseño ux/ui">
-        <article class="div-content">
+    <div class="child-div-flip">
+        <div class="child-inner">
+            <div class="child-front">
+                <img class="icon" src="assets/img/icons/user-experience.png" alt="diseño ux/ui">
+                <h3 class="h3">Diseño UX/UI</h3>
+            </div>
+            <article class="child-back">
             <h3 class="h3">Diseño UX/UI</h3>
             <p class="content-p">Diseño experiencias digitales que conectan personas con propósitos, transformando ideas en interfaces intuitivas, accesibles y emocionalmente resonantes.
                 </p>
         </article>
+        </div>
+        
     </div>
-    <div class="div4 child-div">
-        <img class="icon" src="assets/img/icons/backend-coding.png" alt="backend-coding">
-        <article class="div-content">
-            <h3 class="h3">Backend y Bases de Datos</h3>
+    <div class="child-div-flip onclick="this.classList.toggle('flipped')"">
+        <div class="child-inner">
+            <div class="child-front">
+                <img class="icon" src="assets/img/icons/backend-coding.png" alt="backend-coding">
+                <h3 class="h3">Backend y Bases de Datos</h3>
+            </div>
+             <article class="child-back">
+             <h3 class="h3">Backend y Bases de Datos</h3>
             <p class="content-p">Construyo estructuras digitales que sostienen experiencias fluidas y seguras, transformando ideas en sistemas robustos y escalables.</p>
         </article>
+        </div>
+       
     </div>
-    <div class="div5 child-div">
-        <img class="icon" src="assets/img/icons/content.png" alt="creacion de contenido">
-        <article class="div-content">
+    <div class="child-div-flip">
+        <div class="child-inner">
+            <div class="child-front">
+                <img class="icon" src="assets/img/icons/content.png" alt="creacion de contenido">
+                <h3 class="h3">Creacion de Contenido</h3>
+            </div>
+            <article class="child-back">
             <h3 class="h3">Creacion de Contenido</h3>
             <p class="content-p">Transformo conceptos en narrativas visuales y textuales que conectan con tu audiencia.</p>
         </article>
+        </div>
+        
     </div>
 </section>
 <section class="projects" id="projects">
     <h2 class="h2">Proyecto Recientes</h2>
    <div class="child-container">
-     <div class="projects-child">Contenido</div>
-    <div class="projects-child">Contenido</div>
+     <div class="projects-child child1 grow" data-href="https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"></div>
+    <div class="projects-child child2 grow" data-href="https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"></div>
    </div>
     <button class="btn-project">Ver Mas</button>
 </section>
-    
+    <!-- 
+🔧 Animación pendiente: transición elegante entre páginas con efecto "grow"
+
+✔️ CSS aplicado:
+- .child1 tiene transición en transform y opacity
+- .child1.grow aplica scale(1.05) y opacity: 0 para desvanecer
+
+✔️ JavaScript activo:
+- Al hacer clic en el div, se agrega la clase .grow
+- Después de 600ms, se redirige a la página indicada en data-href
+
+📌 Pendientes por mejorar:
+1. Agregar efecto de entrada en la nueva página (ej. body.loaded con fade-in y scale)
+2. Modular para múltiples cards con destinos distintos
+3. Integrar soporte para móviles (touchstart) si se requiere
+4. Opcional: añadir blur o clip-path para una transición más artística
+
+🧠 Recomendación visual:
+Usar cubic-bezier o filter: blur para reforzar el estilo cálido y profesional
+
+-->
     </main>
+    <script>
+  document.querySelectorAll('.child-div-flip').forEach(card => {
+  card.addEventListener('click', () => {
+    // Cierra todos los demás cards
+    document.querySelectorAll('.child-div-flip.flipped').forEach(openCard => {
+      if (openCard !== card) {
+        openCard.classList.remove('flipped');
+      }
+    });
+
+    // Alterna el estado del card actual
+    card.classList.toggle('flipped');
+  });
+});
+
+</script>
+
 </body>
 </html>
