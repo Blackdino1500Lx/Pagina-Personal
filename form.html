@@ -8,9 +8,30 @@
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="assets/style/form-Style.css">
     
+    
 </head>
 <body>
-
+<header class="header" id="index">
+        <div class="top">
+            <h1 class="h1">
+                <a href="#index">Edward Salguera <span class="logo-Span">Portfolio</span></a>
+            </h1>
+            <!-- Ícono de Menú Hamburguesa -->
+            <button id="menu-toggle" aria-label="Toggle navigation" class="menu-button">
+                <svg viewBox="0 0 100 80" width="30" height="30" fill="var(--dark-plum)">
+                    <rect width="100" height="15" rx="5"></rect>
+                    <rect y="35" width="100" height="15" rx="5"></rect>
+                    <rect y="70" width="100" height="15" rx="5"></rect>
+                </svg>
+            </button>
+            <nav id="main-nav">
+                <a class="active" href="#index">Inicio</a>
+                <a class="active" href="#services">Servicios</a>
+                <a class="active" href="#projects">Desarrollo</a>
+                <a class="active" href="#gallery">Galería</a>
+            </nav>
+        </div>
+</header>
     <section id="contact-form" class="raleway-font">
         <h2 class="h2">Hablemos de tu Proyecto</h2>
         <div class="form-container quicksand-font">
@@ -39,6 +60,16 @@
             </form>
         </div>
     </section>
-
+    <footer>
+    <h2 id="Contact" class="h2 raleway-font">Contacto</h2>
+    <div class="footer-contact">
+        <a href="mailto:salgueragonzaleze4@gmail.com"><img src="assets/img/icons/mail.png" alt="mail"></a>
+        <a href="linkedin"><img src="assets/img/icons/linkedin.png" alt="linkedin"></a>
+        <a href="form.html"><img src="assets/img/icons/contact.png" alt="contacto"></a>
+        <article>
+            &copy; 2025 Edward Salguera. Todos los derechos reservados.
+        </article>
+</footer>
+<script type="module" src="assets/js/nav-scroll.js"></script>
 </body>
 </html>

@@ -28,14 +28,129 @@ body {
     padding-top: 2rem;
 }
 
-.h2 {
-    text-align: center;
-    color: var(--jet);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+header {
+/* Ajuste para móvil */
+height: 30rem; 
+padding-top: 5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+ 
+.top {
+position: fixed;
+top: 0;
+width: 100%;
+height: 5rem; 
+display: flex;
+justify-content: space-between;
+align-items: center; 
+padding: 0 1rem; 
+z-index: 10;
+transition: background-color 0.3s ease;
+}
+
+/* Títulos del Logo */
+.h1 a {
+text-decoration: none;
+color: var(--dark-plum);
+}
+h1 {
+padding: 0;
+margin: 0;
+font-size: 1.5rem;
+}
+.logo-Span {
+font-size: 1rem;
+display: inline-block;
+}
+
+
+
+.menu-button {
+background: none;
+border: none;
+cursor: pointer;
+padding: 0.5rem;
+display: block; /* Visible en móvil por defecto */
+z-index: 11; 
+}
+
+nav {
+/* Estado inicial: Oculto en móvil */
+display: none; 
+}
+
+/* Estilo de la navegación al abrirse en móvil */
+header.menu-open nav {
+display: flex;
+flex-direction: column;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-color: rgba(245, 255, 250, 0.95); /* var(--mint-cream) con transparencia */
+z-index: 9;
+align-items: center;
+justify-content: center;
+gap: 3rem;
+}
+
+header.menu-open nav a {
+font-size: 1.8rem;
+color: var(--dark-plum);
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+/* Header/Top Bar */
+header {
+height: 0;
+padding-top: 7rem;
+}
+
+.top {
+padding: 0 2rem;
+}
+
+/* Ocultar el botón de menú en escritorio */
+.menu-button {
+display: none;
+}
+
+nav {
+/* Mostrar navegación en escritorio y establecer su layout original */
+display: flex; 
+flex-direction: row;
+position: static;
+height: auto;
+width: auto;
+background-color: transparent;
+z-index: 10;
+align-items: center;
+justify-content: flex-end;
+gap: 2rem;
+margin-right: 1rem;
+}
+
+nav a {
+font-size: 1.2rem;
+color: var(--jet); 
+}
+
 }
 
 /* Estilos del Formulario */
+.h2{
+    text-align: center;
+}
 .form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -101,10 +216,57 @@ textarea {
     background-color: var(--dark-plum); /* Oscurecer al pasar el ratón */
 }
 
-/* Media Query para Escritorio (más ancho) */
+
 @media (min-width: 768px) {
     .form-container {
         padding: 3rem;
         max-width: 600px;
     }
+}
+
+footer{
+background-color: var(--indigo);
+color: var(--mint-cream);
+display: flex;
+flex-direction: column; /* Vertical en móvil */
+align-items: center;
+justify-content: center;
+margin-top: 2rem;
+width: 100%;
+height: auto; 
+padding: 2rem 1rem;
+text-align: center;
+}
+#Contact{
+color: var(--mint-cream);
+margin-bottom: 1rem;
+}
+.footer-contact {
+display: flex;
+flex-direction: row; /* Íconos en fila incluso en móvil */
+justify-content: center;
+align-items: center;
+flex-wrap: wrap; 
+}
+footer img{
+width: 2.5rem; /* Iconos más pequeños en móvil */
+filter: invert();
+margin: 0.5rem 1rem; 
+}
+footer article {
+width: 100%;
+margin-top: 1rem;
+font-size: 0.9rem;
+}
+
+
+@media (min-width: 768px) {
+
+/* Footer */
+footer {
+height: 15rem; /* Altura fija en desktop */
+}
+.footer-contact {
+flex-direction: row;
+}
 }
