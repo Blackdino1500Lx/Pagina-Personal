@@ -3,11 +3,11 @@
 :root {
     --dark-plum: #331E36;
     --indigo: #41337A;
-    --steel-blue: rgb(110, 164, 191);
+    --steel-blue: #6ea4bf;
     --pale-aqua: #78d5ce;
     --light-cream: #ECFEE8;
     --mint-cream: #F5FFFA;
-    --jet: rgb(51, 51, 51);
+    --jet: #333333;
 }
 
 /* Tipografías */
