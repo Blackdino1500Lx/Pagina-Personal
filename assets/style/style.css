@@ -64,10 +64,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* ------------------------------------- */
-/* ESTILOS DEL MENÚ HAMBURGUESA (MÓVIL) */
-/* ------------------------------------- */
-
 .menu-button {
     background: none;
     border: none;
@@ -78,11 +74,11 @@ header {
 }
 
 nav {
-    /* Estado inicial: Oculto en móvil */
+    
     display: none; 
 }
 
-/* Estilo de la navegación al abrirse en móvil (usando la clase 'menu-open' en el header) */
+
 header.menu-open nav {
     display: flex;
     flex-direction: column;
@@ -187,7 +183,7 @@ a.bts2:hover {
     padding: 2rem 1rem;
 }
 
-/* Flip Card (Ajustado a fluido en móvil) */
+
 .child-div-flip {
     /* Toman 100% del contenedor (menos padding) */
     width: 100%; 
@@ -364,9 +360,7 @@ footer article {
     font-size: 0.9rem;
 }
 
-/* ======================================= */
-/* MEDIA QUERY: Diseño para Pantallas Grandes (Tablet y Escritorio) */
-/* ======================================= */
+
 @media (min-width: 768px) {
     
     /* Header/Top Bar */
