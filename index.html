@@ -14,25 +14,25 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="index">
         <div class="top">
             <h1 class="h1">
-                <a href="index.html">Edward Salguera <span class="logo-Span">Portfolio</span></a>
+                <a href="#index">Edward Salguera <span class="logo-Span">Portfolio</span></a>
             </h1>
             <nav>
-                <a class="active" href="index.html">Home</a>
+                <a class="active" href="#index">Inicio</a>
                 <a class="active" href="#services">Servicios</a>
-                <a class="active" href="#projects">Proyectos</a>
-                <a class="active" href="#Contact">Contacto</a>
+                <a class="active" href="#projects">Desarrollo</a>
+                <a class="active" href="#gallery">Galería</a>
             </nav>
         </div>
-            <article class="banner-text quicksand-fonty ">
+            <article class="banner-text quicksand-font ">
                 <h2 class="banner-text-h2"><span class="bts1">Desarrollo Web</span> y <span class="bts2">Fotografia profesional</span> con alma colaborativa.</h2>
                 <h3 class="h3-banner">Cada linea de codigo, cada imagen, cuentan una historia bien pensada</h3>
             </article>
 </header>
 <main>
- <h2 id="services" class="h2">Servicios</h2>       
+    <h2 id="services" class="h2">Servicios</h2>       
 <section class="services" id="services">
     <div class="child-div-flip">
         <div class="child-inner">
@@ -60,7 +60,7 @@
         </div>
         
     </div>
-    <div class="child-div-flip onclick="this.classList.toggle('flipped')"">
+    <div class="child-div-flip">
         <div class="child-inner">
             <div class="child-front">
                 <img class="icon" src="assets/img/icons/backend-coding.png" alt="backend-coding">
@@ -87,35 +87,35 @@
         
     </div>
 </section>
-<section class="projects" id="projects">
-    <h2 class="h2">Proyecto Recientes</h2>
-   <div class="child-container">
-     <div class="projects-child child1 grow" data-href="https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"></div>
-    <div class="projects-child child2 grow" data-href="https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"></div>
-   </div>
-    <button class="btn-project">Ver Mas</button>
+<section id="projects" class="projects">
+    <h2 class="h2 raleway-font">Mis Proyectos Recientes</h2>
+    <div class="child-container" id="projects-list">
+    </div>
+    <button class="btn-project raleway-font" id="loadProjectsButton">
+        Mostrar Proyectos
+    </button>
 </section>
-    <!-- 
-🔧 Animación pendiente: transición elegante entre páginas con efecto "grow"
-
-✔️ CSS aplicado:
-- .child1 tiene transición en transform y opacity
-- .child1.grow aplica scale(1.05) y opacity: 0 para desvanecer
-
-✔️ JavaScript activo:
-- Al hacer clic en el div, se agrega la clase .grow
-- Después de 600ms, se redirige a la página indicada en data-href
-
-📌 Pendientes por mejorar:
-1. Agregar efecto de entrada en la nueva página (ej. body.loaded con fade-in y scale)
-2. Modular para múltiples cards con destinos distintos
-3. Integrar soporte para móviles (touchstart) si se requiere
-4. Opcional: añadir blur o clip-path para una transición más artística
-
-🧠 Recomendación visual:
-Usar cubic-bezier o filter: blur para reforzar el estilo cálido y profesional
-
--->
+  <section id="gallery" class="gallery">
+    <h2 class="h2 raleway-font">Mi Galería de Diseños</h2>
+    <!-- CAMBIO DE ID AQUÍ -->
+    <div class="child-container" id="gallery-list">
+    </div>
+    <!-- CAMBIO DE ID AQUÍ -->
+    <button class="btn-project raleway-font" id="galleryLoadButton">
+        Mostrar Más Diseños
+    </button>
+</section>
+</section>
+<footer>
+    <h2 id="Contact" class="h2 raleway-font">Contacto</h2>
+    <div class="footer-contact">
+        <a href="mailto:salgueragonzaleze4@gmail.com"><img src="assets/img/icons/mail.png" alt="mail"></a>
+        <a href="linkedin"><img src="assets/img/icons/linkedin.png" alt="linkedin"></a>
+        <a href="insta"><img src="assets/img/icons/instagram.png" alt="instagram"></a>
+        <article>
+            &copy; 2025 Edward Salguera. Todos los derechos reservados.
+        </article>
+</footer>
     </main>
     <script>
   document.querySelectorAll('.child-div-flip').forEach(card => {
@@ -133,6 +133,10 @@ Usar cubic-bezier o filter: blur para reforzar el estilo cálido y profesional
 });
 
 </script>
-
+<script type="module" src="/assets/js/nav-scroll.js"></script>
+<script type="module" src="/assets/js/link-h2.js"></script>
+<script type="module" src="/assets/js/newTabLoad.js"></script>
+<script type="module" src="/assets/js/view-more.js"></script>
+<script type="module" src="/assets/js/gallery-load.js"></script>
 </body>
 </html>
