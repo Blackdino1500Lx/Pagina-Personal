@@ -1,0 +1,110 @@
+/* Variables y Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark-plum: #331E36;
+    --indigo: #41337A;
+    --steel-blue: #6ea4bf;
+    --pale-aqua: #78d5ce;
+    --light-cream: #ECFEE8;
+    --mint-cream: #F5FFFA;
+    --jet: #333333;
+}
+
+/* Tipografías */
+.raleway-font {
+    font-family: "Raleway", sans-serif;
+}
+.quicksand-font {
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Base */
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--mint-cream);
+    color: var(--jet);
+    padding-top: 2rem;
+}
+
+.h2 {
+    text-align: center;
+    color: var(--jet);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos del Formulario */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light-cream);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(51, 30, 54, 0.1); /* Sombra basada en dark-plum */
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--dark-plum);
+    font-family: "Raleway", sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--pale-aqua);
+    border-radius: 5px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--steel-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(110, 164, 191, 0.2); /* Sombra suave al enfocar */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--indigo);
+    color: var(--mint-cream);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--dark-plum); /* Oscurecer al pasar el ratón */
+}
+
+/* Media Query para Escritorio (más ancho) */
+@media (min-width: 768px) {
+    .form-container {
+        padding: 3rem;
+        max-width: 600px;
+    }
+}
