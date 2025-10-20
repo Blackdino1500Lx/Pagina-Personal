@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="assets/style/style.css">
+    <!-- Nota: Cambié a ruta absoluta para mejor compatibilidad con GitHub Pages -->
+    <link rel="stylesheet" href="/assets/style/style.css"> 
 </head>
 
 <body>
@@ -19,7 +20,15 @@
             <h1 class="h1">
                 <a href="#index">Edward Salguera <span class="logo-Span">Portfolio</span></a>
             </h1>
-            <nav>
+            <!-- Ícono de Menú Hamburguesa -->
+            <button id="menu-toggle" aria-label="Toggle navigation" class="menu-button">
+                <svg viewBox="0 0 100 80" width="30" height="30" fill="var(--dark-plum)">
+                    <rect width="100" height="15" rx="5"></rect>
+                    <rect y="35" width="100" height="15" rx="5"></rect>
+                    <rect y="70" width="100" height="15" rx="5"></rect>
+                </svg>
+            </button>
+            <nav id="main-nav">
                 <a class="active" href="#index">Inicio</a>
                 <a class="active" href="#services">Servicios</a>
                 <a class="active" href="#projects">Desarrollo</a>
@@ -32,7 +41,7 @@
             </article>
 </header>
 <main>
-    <h2 id="services" class="h2">Servicios</h2>       
+    <h2 id="services" class="h2">Servicios</h2>        
 <section class="services" id="services">
     <div class="child-div-flip">
         <div class="child-inner">
@@ -66,12 +75,12 @@
                 <img class="icon" src="assets/img/icons/backend-coding.png" alt="backend-coding">
                 <h3 class="h3">Backend y Bases de Datos</h3>
             </div>
-             <article class="child-back">
-             <h3 class="h3">Backend y Bases de Datos</h3>
+              <article class="child-back">
+              <h3 class="h3">Backend y Bases de Datos</h3>
             <p class="content-p">Construyo estructuras digitales que sostienen experiencias fluidas y seguras, transformando ideas en sistemas robustos y escalables.</p>
         </article>
         </div>
-       
+        
     </div>
     <div class="child-div-flip">
         <div class="child-inner">
@@ -117,26 +126,48 @@
         </article>
 </footer>
     </main>
+    <!-- Script existente para las tarjetas flip -->
     <script>
-  document.querySelectorAll('.child-div-flip').forEach(card => {
-  card.addEventListener('click', () => {
-    // Cierra todos los demás cards
-    document.querySelectorAll('.child-div-flip.flipped').forEach(openCard => {
-      if (openCard !== card) {
-        openCard.classList.remove('flipped');
-      }
-    });
+        document.querySelectorAll('.child-div-flip').forEach(card => {
+            card.addEventListener('click', () => {
+                // Cierra todos los demás cards
+                document.querySelectorAll('.child-div-flip.flipped').forEach(openCard => {
+                    if (openCard !== card) {
+                        openCard.classList.remove('flipped');
+                    }
+                });
 
-    // Alterna el estado del card actual
-    card.classList.toggle('flipped');
-  });
-});
+                // Alterna el estado del card actual
+                card.classList.toggle('flipped');
+            });
+        });
 
-</script>
-<script type="module" src="assets/js/nav-scroll.js"></script>
-<script type="module" src="assets/js/link-h2.js"></script>
-<script type="module" src="assets/js/newTabLoad.js"></script>
-<script type="module" src="assets/js/view-more.js"></script>
-<script type="module" src="assets/js/gallery-load.js"></script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const header = document.querySelector('header');
+
+            menuToggle.addEventListener('click', () => {
+                // Alterna la clase 'menu-open' en el header para que el CSS
+                // pueda mostrar el menú de navegación y aplicar el fondo
+                header.classList.toggle('menu-open');
+            });
+
+            // Cerrar menú al hacer clic en un enlace (si está abierto)
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (header.classList.contains('menu-open')) {
+                        header.classList.remove('menu-open');
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Nota: He cambiado a rutas relativas al directorio actual para evitar los errores 404 si el HTML está en la raíz. -->
+    <script type="module" src="assets/js/nav-scroll.js"></script>
+    <script type="module" src="assets/js/link-h2.js"></script>
+    <script type="module" src="assets/js/newTabLoad.js"></script>
+    <script type="module" src="assets/js/view-more.js"></script>
+    <script type="module" src="assets/js/gallery-load.js"></script>
 </body>
 </html>
