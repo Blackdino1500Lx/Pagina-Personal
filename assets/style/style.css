@@ -110,7 +110,7 @@ h1 {
     font-size: 1.5rem;
 }
 .logo-Span {
-    font-size: 1rem;
+    color: var(--pale-aqua);
     display: inline-block;
 }
 
@@ -170,6 +170,7 @@ a.bts2:hover {
 }
 .h3 {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Contenedor de tarjetas en grid (Mobile-First: 1 Columna) */
@@ -359,7 +360,10 @@ footer article {
     margin-top: 1rem;
     font-size: 0.9rem;
 }
-
+.footer-a a{
+    text-decoration: none;
+    color: var(--mint-cream);
+}
 
 @media (min-width: 768px) {
     
@@ -416,8 +420,10 @@ footer article {
     
     /* Servicios (Vuelve a 2 columnas) */
     .services {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+       display: flex;
+       flex-direction: row;
+       max-width: 90%;
+       align-items: center;
     }
     
     .child-div-flip {
