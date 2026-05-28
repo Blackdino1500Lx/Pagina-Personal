@@ -238,9 +238,12 @@ a.bts2:hover {
 }
 
 .icon {
-    max-width: 3rem; /* Iconos más pequeños en móvil */
-    margin: 0 auto;
-    filter: invert();
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 auto 0.5rem;
+    stroke: #fff;
+    color: #fff;
+    filter: none;
 }
 .content-p {
     font-size: 0.9rem;
