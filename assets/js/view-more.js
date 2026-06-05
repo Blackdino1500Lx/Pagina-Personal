@@ -26,8 +26,15 @@ const projectData = [
         name: "Panel de administracion",
         tag: "Dashboard",
         description: "Panel que permite agregar elementos mediante el uso de una base de datos.",
-        image: "assets/img/Panel-Admin.png", 
-        link: "#" 
+        image: "assets/img/Panel-Admin.png",
+        link: "#"
+    },
+    {
+        name: "MoonGrow",
+        tag: "App Web",
+        description: "Fases lunares y riego inteligente de plantas. Calendario lunar interactivo con recomendaciones de riego según la fase de la luna.",
+        image: "assets/img/moongrow.png",
+        link: "https://moongrow.edevcr.com/"
     }
 ];
 
