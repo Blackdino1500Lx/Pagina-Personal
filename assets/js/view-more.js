@@ -2,25 +2,11 @@
 
 const projectData = [
     {
-        name: "TeachNest",
-        tag: "Plataforma EdTech",
-        description: "Plataforma educativa para docentes independientes: gestión de alumnos, prácticas inteligentes y sandbox de matemáticas.",
-        image: "assets/img/teachnest.png",
-        link: "https://teachnestcr.com"
-    },
-    {
-        name: "Andrea's Body Skin",
-        tag: "E-Commerce",
-        description: "Sitio web de e-commerce centrado en el cuidado personal y la estética.",
-        image: "assets/img/andrea-body-skin.png", 
-        link: "https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"
-    },
-    {
-        name: "Gestion Cultural Alajuelita",
+        name: "MoonGrow",
         tag: "App Web",
-        description: "Aplicación para la gestión de recursos culturales y administrativos.",
-        image: "assets/img/GestAlajuelitaMuni.png", 
-        link: "https://gestioncultural-alajuelita.netlify.app/"
+        description: "Fases lunares y riego inteligente de plantas. Calendario lunar interactivo con recomendaciones de riego según la fase de la luna.",
+        image: "assets/img/moongrow.png",
+        link: "https://moongrow.edevcr.com/"
     },
     {
         name: "Panel de administracion",
@@ -30,11 +16,25 @@ const projectData = [
         link: "#"
     },
     {
-        name: "MoonGrow",
+        name: "Gestion Cultural Alajuelita",
         tag: "App Web",
-        description: "Fases lunares y riego inteligente de plantas. Calendario lunar interactivo con recomendaciones de riego según la fase de la luna.",
-        image: "assets/img/moongrow.png",
-        link: "https://moongrow.edevcr.com/"
+        description: "Aplicación para la gestión de recursos culturales y administrativos.",
+        image: "assets/img/GestAlajuelitaMuni.png",
+        link: "https://gestioncultural-alajuelita.netlify.app/"
+    },
+    {
+        name: "Andrea's Body Skin",
+        tag: "E-Commerce",
+        description: "Sitio web de e-commerce centrado en el cuidado personal y la estética.",
+        image: "assets/img/andrea-body-skin.png",
+        link: "https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"
+    },
+    {
+        name: "TeachNest",
+        tag: "Plataforma EdTech",
+        description: "Plataforma educativa para docentes independientes: gestión de alumnos, prácticas inteligentes y sandbox de matemáticas.",
+        image: "assets/img/teachnest.png",
+        link: "https://teachnestcr.com"
     }
 ];
 
