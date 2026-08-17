@@ -2,11 +2,25 @@
 
 const projectData = [
     {
+        name: "KerryCare CR",
+        tag: "App Web",
+        description: "Servicios de Belleza y Estética. Gestión de citas, productos y servicios. Plataforma para clientes y administradores.",
+        image: "assets/img/kerrycarecr.png",
+        link: "https://kerrycarecr.com/"
+    },
+    {
         name: "MoonGrow",
         tag: "App Web",
         description: "Fases lunares y riego inteligente de plantas. Calendario lunar interactivo con recomendaciones de riego según la fase de la luna.",
         image: "assets/img/moongrow.png",
         link: "https://moongrow.edevcr.com/"
+    },
+    {
+        name: "TeachNest",
+        tag: "Plataforma EdTech",
+        description: "Plataforma educativa para docentes independientes: gestión de alumnos, prácticas inteligentes y sandbox de matemáticas.",
+        image: "assets/img/teachnest.png",
+        link: "https://teachnestcr.com"
     },
     {
         name: "Panel de administracion",
@@ -28,14 +42,8 @@ const projectData = [
         description: "Sitio web de e-commerce centrado en el cuidado personal y la estética.",
         image: "assets/img/andrea-body-skin.png",
         link: "https://blackdino1500lx.github.io/Andrea-s-Body-Skin/"
-    },
-    {
-        name: "TeachNest",
-        tag: "Plataforma EdTech",
-        description: "Plataforma educativa para docentes independientes: gestión de alumnos, prácticas inteligentes y sandbox de matemáticas.",
-        image: "assets/img/teachnest.png",
-        link: "https://teachnestcr.com"
     }
+    
 ];
 
 let projectsLoaded = false;
